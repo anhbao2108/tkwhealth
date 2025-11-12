@@ -1,0 +1,17 @@
+.about-container {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 40px 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-text { flex: 1; }
+.about-image { width: 400px; flex-shrink: 0; }
+
+.doctor-img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}

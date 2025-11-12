@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dịch vụ - Phòng khám ABC</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/services.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="services.html" class="active">Dịch vụ</a></li>
+        <li><a href="news.html">Tin tức</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="service-grid">
+    <div class="service-item" onclick="openModal('Khám tổng quát')">
+      <img src="https://via.placeholder.com/300x200" alt="Khám tổng quát">
+      <h3>Khám tổng quát</h3>
+    </div>
+    <div class="service-item" onclick="openModal('Xét nghiệm máu')">
+      <img src="https://via.placeholder.com/300x200" alt="Xét nghiệm máu">
+      <h3>Xét nghiệm máu</h3>
+    </div>
+    <div class="service-item" onclick="openModal('Tư vấn dinh dưỡng')">
+      <img src="https://via.placeholder.com/300x200" alt="Tư vấn dinh dưỡng">
+      <h3>Tư vấn dinh dưỡng</h3>
+    </div>
+  </main>
+
+  <div id="serviceModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p>Thông tin chi tiết dịch vụ...</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Phòng khám ABC</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/services.js"></script>
+</body>
+</html>
