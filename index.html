@@ -2,11 +2,9 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Chủ - Phòng Khám Nha Khoa</title>
+    <title>Tin Tức Sức Khỏe</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/news.css">
 </head>
 <body>
     <header>
@@ -14,41 +12,39 @@
             <div class="logo"><h1>Dental Care</h1></div>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">Trang Chủ</a></li>
+                    <li><a href="index.html">Trang Chủ</a></li>
                     <li><a href="about.html">Giới Thiệu</a></li>
                     <li><a href="services.html">Dịch Vụ</a></li>
-                    <li><a href="news.html">Tin Tức</a></li>
+                    <li><a href="news.html" class="active">Tin Tức</a></li>
                     <li><a href="contact.html">Liên Hệ</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="banner-slider">
-            <div class="slide active">
-                <img src="images/hero.jpg" alt="Banner 1">
-                <div class="caption">Nụ Cười Tỏa Sáng - Tương Lai Rạng Ngời</div>
-            </div>
-            <div class="slide">
-                <img src="images/hero.jpg" alt="Banner 2" style="filter: hue-rotate(45deg);"> 
-                <div class="caption">Công Nghệ Nha Khoa Hiện Đại Nhất</div>
-            </div>
-            
-            <button class="prev-btn">&#10094;</button>
-            <button class="next-btn">&#10095;</button>
-        </section>
+    <main class="container">
+        <h2 class="page-title">Tin Tức & Sự Kiện</h2>
+        
+        <div class="news-list">
+            <article class="news-item">
+                <img src="images/news1.jpg" alt="News 1">
+                <div class="news-content fade-text">
+                    <h3>5 Cách Chăm Sóc Răng Miệng Tại Nhà</h3>
+                    <p>Hướng dẫn chi tiết cách đánh răng đúng cách và sử dụng chỉ nha khoa để tránh sâu răng hiệu quả...</p>
+                </div>
+            </article>
 
-        <section class="container welcome-text">
-            <h2>Chào mừng đến với Dental Care</h2>
-            <p>Chúng tôi cam kết mang lại dịch vụ chăm sóc răng miệng tốt nhất với đội ngũ bác sĩ chuyên nghiệp và trang thiết bị hiện đại.</p>
-        </section>
+            <article class="news-item">
+                <img src="images/news2.jpg" alt="News 2">
+                <div class="news-content fade-text">
+                    <h3>Khuyến Mãi Tháng 12: Giảm 20% Cạo Vôi</h3>
+                    <p>Chương trình tri ân khách hàng cuối năm, áp dụng cho tất cả các dịch vụ nha khoa tổng quát...</p>
+                </div>
+            </article>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Phòng Khám Nha Khoa Dental Care.</p>
-    </footer>
-
-    <script src="js/home.js"></script>
+    <footer><p>&copy; 2024 Phòng Khám Nha Khoa Dental Care.</p></footer>
+    <script src="js/news.js"></script>
 </body>
 </html>
