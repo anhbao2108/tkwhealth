@@ -2,9 +2,9 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Tin Tức Sức Khỏe</title>
+    <title>Dịch Vụ</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/services.css">
 </head>
 <body>
     <header>
@@ -14,8 +14,8 @@
                 <ul>
                     <li><a href="index.html">Trang Chủ</a></li>
                     <li><a href="about.html">Giới Thiệu</a></li>
-                    <li><a href="services.html">Dịch Vụ</a></li>
-                    <li><a href="news.html" class="active">Tin Tức</a></li>
+                    <li><a href="services.html" class="active">Dịch Vụ</a></li>
+                    <li><a href="news.html">Tin Tức</a></li>
                     <li><a href="contact.html">Liên Hệ</a></li>
                 </ul>
             </nav>
@@ -23,28 +23,35 @@
     </header>
 
     <main class="container">
-        <h2 class="page-title">Tin Tức & Sự Kiện</h2>
+        <h2 class="page-title">Dịch Vụ Của Chúng Tôi</h2>
         
-        <div class="news-list">
-            <article class="news-item">
-                <img src="images/news1.jpg" alt="News 1">
-                <div class="news-content fade-text">
-                    <h3>5 Cách Chăm Sóc Răng Miệng Tại Nhà</h3>
-                    <p>Hướng dẫn chi tiết cách đánh răng đúng cách và sử dụng chỉ nha khoa để tránh sâu răng hiệu quả...</p>
-                </div>
-            </article>
+        <div class="services-grid">
+            <div class="service-card" onclick="openModal('Tẩy Trắng Răng', 'Công nghệ Laser Whitening giúp răng trắng sáng bật tông chỉ sau 1 giờ.')">
+                <img src="images/service1.jpg" alt="Service 1">
+                <h3>Tẩy Trắng Răng</h3>
+            </div>
+            
+            <div class="service-card" onclick="openModal('Niềng Răng', 'Phương pháp chỉnh nha thẩm mỹ, mắc cài kim loại hoặc Invisalign trong suốt.')">
+                <img src="images/service2.jpg" alt="Service 2">
+                <h3>Niềng Răng</h3>
+            </div>
 
-            <article class="news-item">
-                <img src="images/news2.jpg" alt="News 2">
-                <div class="news-content fade-text">
-                    <h3>Khuyến Mãi Tháng 12: Giảm 20% Cạo Vôi</h3>
-                    <p>Chương trình tri ân khách hàng cuối năm, áp dụng cho tất cả các dịch vụ nha khoa tổng quát...</p>
-                </div>
-            </article>
+            <div class="service-card" onclick="openModal('Cấy Ghép Implant', 'Giải pháp phục hình răng đã mất hoàn hảo nhất hiện nay, độ bền trọn đời.')">
+                <img src="images/service3.jpg" alt="Service 3">
+                <h3>Cấy Ghép Implant</h3>
+            </div>
         </div>
     </main>
 
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Tiêu đề dịch vụ</h2>
+            <p id="modalDesc">Mô tả dịch vụ...</p>
+        </div>
+    </div>
+
     <footer><p>&copy; 2024 Phòng Khám Nha Khoa Dental Care.</p></footer>
-    <script src="js/news.js"></script>
+    <script src="js/services.js"></script>
 </body>
 </html>
