@@ -1,49 +1,72 @@
+/* --- RESET & GLOBAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
-  line-height: 1.4;
+    background-color: #f4f8fb; /* Màu nền xanh rất nhạt */
+    color: #333;
+    line-height: 1.6;
 }
 
-.navbar {
-  background-color: #0e9aa7;
-  text-align: center;
-  padding: 10px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* --- HEADER & MENU --- */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.navbar li {
-  display: inline-block;
-  margin: 0 20px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-  padding: 6px 8px;
-}
-
-.navbar a:hover, .navbar a.active {
-  color: #ffd700;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #f2f2f2;
-  margin-top: 40px;
-}
-
-/* helper */
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 16px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #0056b3; /* Xanh y tế đậm */
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    font-weight: 500;
+    color: #555;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #0056b3;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
 }
