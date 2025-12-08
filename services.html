@@ -1,53 +1,57 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dịch vụ - Phòng khám ABC</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/services.css">
+    <meta charset="UTF-8">
+    <title>Dịch Vụ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/services.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Trang chủ</a></li>
-        <li><a href="about.html">Giới thiệu</a></li>
-        <li><a href="services.html" class="active">Dịch vụ</a></li>
-        <li><a href="news.html">Tin tức</a></li>
-        <li><a href="contact.html">Liên hệ</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="container">
+            <div class="logo"><h1>Dental Care</h1></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="about.html">Giới Thiệu</a></li>
+                    <li><a href="services.html" class="active">Dịch Vụ</a></li>
+                    <li><a href="news.html">Tin Tức</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <main class="service-grid">
-    <div class="service-item" onclick="openModal('Khám tổng quát')">
-      <img src="https://via.placeholder.com/300x200" alt="Khám tổng quát">
-      <h3>Khám tổng quát</h3>
-    </div>
-    <div class="service-item" onclick="openModal('Xét nghiệm máu')">
-      <img src="https://via.placeholder.com/300x200" alt="Xét nghiệm máu">
-      <h3>Xét nghiệm máu</h3>
-    </div>
-    <div class="service-item" onclick="openModal('Tư vấn dinh dưỡng')">
-      <img src="https://via.placeholder.com/300x200" alt="Tư vấn dinh dưỡng">
-      <h3>Tư vấn dinh dưỡng</h3>
-    </div>
-  </main>
+    <main class="container">
+        <h2 class="page-title">Dịch Vụ Của Chúng Tôi</h2>
+        
+        <div class="services-grid">
+            <div class="service-card" onclick="openModal('Tẩy Trắng Răng', 'Công nghệ Laser Whitening giúp răng trắng sáng bật tông chỉ sau 1 giờ.')">
+                <img src="images/service1.jpg" alt="Service 1">
+                <h3>Tẩy Trắng Răng</h3>
+            </div>
+            
+            <div class="service-card" onclick="openModal('Niềng Răng', 'Phương pháp chỉnh nha thẩm mỹ, mắc cài kim loại hoặc Invisalign trong suốt.')">
+                <img src="images/service2.jpg" alt="Service 2">
+                <h3>Niềng Răng</h3>
+            </div>
 
-  <div id="serviceModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2 id="modalTitle"></h2>
-      <p>Thông tin chi tiết dịch vụ...</p>
+            <div class="service-card" onclick="openModal('Cấy Ghép Implant', 'Giải pháp phục hình răng đã mất hoàn hảo nhất hiện nay, độ bền trọn đời.')">
+                <img src="images/service3.jpg" alt="Service 3">
+                <h3>Cấy Ghép Implant</h3>
+            </div>
+        </div>
+    </main>
+
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Tiêu đề dịch vụ</h2>
+            <p id="modalDesc">Mô tả dịch vụ...</p>
+        </div>
     </div>
-  </div>
 
-  <footer>
-    <p>© 2025 Phòng khám ABC</p>
-  </footer>
-
-  <script src="js/main.js"></script>
-  <script src="js/services.js"></script>
+    <footer><p>&copy; 2024 Phòng Khám Nha Khoa Dental Care.</p></footer>
+    <script src="js/services.js"></script>
 </body>
 </html>
