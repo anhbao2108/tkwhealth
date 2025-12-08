@@ -1,17 +1,11 @@
-window.addEventListener('scroll', () => {
-  const elements = document.querySelectorAll('.fadein');
-  elements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      el.classList.add('visible');
-    }
-  });
-});
-// also run once on load
-window.addEventListener('load', () => {
-  const elements = document.querySelectorAll('.fadein');
-  elements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) el.classList.add('visible');
-  });
-});
+// Sử dụng Intersection Observer hoặc đơn giản là window.onload để kích hoạt fade in
+window.onload = function() {
+    const textElements = document.querySelectorAll('.fade-text');
+    
+    textElements.forEach((el, index) => {
+        // Set timeout để từng cái hiện ra lần lượt cho đẹp
+        setTimeout(() => {
+            el.classList.add('visible');
+        }, index * 300); // Mỗi bài cách nhau 300ms
+    });
+};
