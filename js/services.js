@@ -1,17 +1,21 @@
-function openModal(title) {
-  const modal = document.getElementById('serviceModal');
-  const modalTitle = document.getElementById('modalTitle');
-  if (modal && modalTitle) {
-    modalTitle.innerText = title;
-    modal.style.display = 'block';
-  }
+// Hàm mở Modal
+function openModal(title, description) {
+    const modal = document.getElementById('serviceModal');
+    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalDesc').innerText = description;
+    
+    modal.style.display = "block";
 }
+
+// Hàm đóng Modal
 function closeModal() {
-  const modal = document.getElementById('serviceModal');
-  if (modal) modal.style.display = 'none';
+    document.getElementById('serviceModal').style.display = "none";
 }
-// close modal when click outside content
-window.addEventListener('click', function(e){
-  const modal = document.getElementById('serviceModal');
-  if (modal && e.target === modal) modal.style.display = 'none';
-});
+
+// Đóng khi click ra ngoài vùng modal
+window.onclick = function(event) {
+    const modal = document.getElementById('serviceModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
