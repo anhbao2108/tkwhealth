@@ -2,11 +2,9 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Chủ - Phòng Khám Nha Khoa</title>
+    <title>Giới Thiệu</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
     <header>
@@ -14,8 +12,8 @@
             <div class="logo"><h1>Dental Care</h1></div>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">Trang Chủ</a></li>
-                    <li><a href="about.html">Giới Thiệu</a></li>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="about.html" class="active">Giới Thiệu</a></li>
                     <li><a href="services.html">Dịch Vụ</a></li>
                     <li><a href="news.html">Tin Tức</a></li>
                     <li><a href="contact.html">Liên Hệ</a></li>
@@ -24,31 +22,25 @@
         </div>
     </header>
 
-    <main>
-        <section class="banner-slider">
-            <div class="slide active">
-                <img src="images/hero.jpg" alt="Banner 1">
-                <div class="caption">Nụ Cười Tỏa Sáng - Tương Lai Rạng Ngời</div>
-            </div>
-            <div class="slide">
-                <img src="images/hero.jpg" alt="Banner 2" style="filter: hue-rotate(45deg);"> 
-                <div class="caption">Công Nghệ Nha Khoa Hiện Đại Nhất</div>
-            </div>
-            
-            <button class="prev-btn">&#10094;</button>
-            <button class="next-btn">&#10095;</button>
-        </section>
+    <main class="container about-section">
+        <div class="about-content">
+            <h2>Về Chúng Tôi</h2>
+            <p>Phòng khám Dental Care được thành lập với sứ mệnh mang lại nụ cười khỏe đẹp cho mọi người. Chúng tôi áp dụng các công nghệ tiên tiến nhất từ Úc và Mỹ.</p>
+            <p>Đội ngũ bác sĩ tận tâm, không gian vô trùng tuyệt đối là cam kết của chúng tôi.</p>
+        </div>
 
-        <section class="container welcome-text">
-            <h2>Chào mừng đến với Dental Care</h2>
-            <p>Chúng tôi cam kết mang lại dịch vụ chăm sóc răng miệng tốt nhất với đội ngũ bác sĩ chuyên nghiệp và trang thiết bị hiện đại.</p>
-        </section>
+        <div class="about-image">
+            <div class="img-wrapper">
+                <img src="images/doctor.jpg" alt="Bác sĩ trưởng khoa" class="doctor-img">
+            </div>
+            <p class="dr-name">BS. Nguyễn Văn A - Trưởng Khoa</p>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Phòng Khám Nha Khoa Dental Care.</p>
     </footer>
-
-    <script src="js/home.js"></script>
+    
+    <script src="js/about.js"></script> 
 </body>
 </html>
