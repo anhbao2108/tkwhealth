@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trang chủ - Phòng khám ABC</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ - Phòng Khám Nha Khoa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html" class="active">Trang chủ</a></li>
-        <li><a href="about.html">Giới thiệu</a></li>
-        <li><a href="services.html">Dịch vụ</a></li>
-        <li><a href="news.html">Tin tức</a></li>
-        <li><a href="contact.html">Liên hệ</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="container">
+            <div class="logo"><h1>Dental Care</h1></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Trang Chủ</a></li>
+                    <li><a href="about.html">Giới Thiệu</a></li>
+                    <li><a href="services.html">Dịch Vụ</a></li>
+                    <li><a href="news.html">Tin Tức</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <main>
-    <section class="banner">
-      <div class="slideshow">
-        <img src="https://via.placeholder.com/1200x400?text=Banner+1" alt="Banner 1">
-        <img src="https://via.placeholder.com/1200x400?text=Banner+2" alt="Banner 2">
-        <img src="https://via.placeholder.com/1200x400?text=Banner+3" alt="Banner 3">
-      </div>
-    </section>
-  </main>
+    <main>
+        <section class="banner-slider">
+            <div class="slide active">
+                <img src="images/hero.jpg" alt="Banner 1">
+                <div class="caption">Nụ Cười Tỏa Sáng - Tương Lai Rạng Ngời</div>
+            </div>
+            <div class="slide">
+                <img src="images/hero.jpg" alt="Banner 2" style="filter: hue-rotate(45deg);"> 
+                <div class="caption">Công Nghệ Nha Khoa Hiện Đại Nhất</div>
+            </div>
+            
+            <button class="prev-btn">&#10094;</button>
+            <button class="next-btn">&#10095;</button>
+        </section>
 
-  <footer>
-    <p>© 2025 Phòng khám ABC</p>
-  </footer>
+        <section class="container welcome-text">
+            <h2>Chào mừng đến với Dental Care</h2>
+            <p>Chúng tôi cam kết mang lại dịch vụ chăm sóc răng miệng tốt nhất với đội ngũ bác sĩ chuyên nghiệp và trang thiết bị hiện đại.</p>
+        </section>
+    </main>
 
-  <script src="js/main.js"></script>
-  <script src="js/home.js"></script>
+    <footer>
+        <p>&copy; 2024 Phòng Khám Nha Khoa Dental Care.</p>
+    </footer>
+
+    <script src="js/home.js"></script>
 </body>
 </html>
