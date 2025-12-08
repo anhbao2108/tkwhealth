@@ -1,4 +1,37 @@
-.news-list { max-width: 1100px; margin: 40px auto; padding: 0 16px; }
-.news-item { display: flex; gap: 16px; background: #fff; padding: 12px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); opacity: 0; transform: translateY(10px); transition: all 0.5s ease; }
-.news-item.visible { opacity: 1; transform: translateY(0); }
-.news-item img { width: 300px; height: 200px; object-fit: cover; border-radius: 6px; }
+.page-title {
+    text-align: center;
+    color: #0056b3;
+    margin: 40px 0;
+}
+
+.news-item {
+    display: flex;
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.news-item img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 4px;
+}
+
+.news-content h3 {
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+/* Class để JS xử lý hiệu ứng */
+.fade-text {
+    opacity: 0; /* Ẩn ban đầu */
+    transition: opacity 2s ease-in; /* Hiệu ứng hiện dần trong 2s */
+}
+
+.visible {
+    opacity: 1; /* Hiện ra */
+}
