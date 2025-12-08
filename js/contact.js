@@ -1,15 +1,28 @@
-document.addEventListener('DOMContentLoaded', function(){
-  const form = document.getElementById('bookingForm');
-  if (!form) return;
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
+document.getElementById('bookingForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Ngăn form load lại trang
+
+    // Lấy giá trị từ input
+    const name = document.getElementById('fullname').value.trim();
     const phone = document.getElementById('phone').value.trim();
-    const regex = /^[0-9]{10}$/;
-    if (!regex.test(phone)) {
-      alert('Số điện thoại không hợp lệ! Vui lòng nhập 10 chữ số.');
-      return;
+    const date = document.getElementById('date').value;
+    const message = document.getElementById('message').value.trim();
+
+    // 1. Kiểm tra rỗng
+    if (!name || !phone || !date) {
+        alert("Vui lòng điền đầy đủ thông tin bắt buộc!");
+        return;
     }
-    alert('Gửi thành công! (Đây là demo, dữ liệu chưa được gửi server)');
-    form.reset();
-  });
+
+    // 2. Kiểm tra số điện thoại (Regex: 10 chữ số)
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(phone)) {
+        alert("Số điện thoại không hợp lệ (Phải là 10 số)!");
+        return;
+    }
+
+    // Nếu mọi thứ OK
+    alert("Đăng ký thành công! Chúng tôi sẽ liên hệ lại với bạn: " + name);
+    
+    // Reset form
+    document.getElementById('bookingForm').reset();
 });
