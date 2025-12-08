@@ -1,7 +1,2 @@
-document.addEventListener('DOMContentLoaded', function(){
-  const doctorImg = document.querySelector('.doctor-img');
-  if (doctorImg) {
-    doctorImg.addEventListener('mouseover', () => doctorImg.style.transform = 'scale(1.06)');
-    doctorImg.addEventListener('mouseout', () => doctorImg.style.transform = 'scale(1)');
-  }
-});
+// File này để trống nếu không có yêu cầu JS cụ thể cho trang About
+console.log("About page loaded");
