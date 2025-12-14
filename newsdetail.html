@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Tin Tức - Dental Care</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/newsdetail.css">
+</head>
+<body>
+
+    <header>
+        <div class="container navbar-inner">
+            <a href="index.html" class="logo">
+                <h1>Dental <span>Care</span></h1>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="about.html">Giới Thiệu</a></li>
+                    <li><a href="services.html">Dịch Vụ</a></li>
+                    <li><a href="news.html" class="active">Tin Tức</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                    <li><a href="contact.html" class="btn-header-booking">Đặt Lịch Ngay</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="newsdetail">
+
+            <h1 id="detail-title" class="detail-title">Đang tải bài viết...</h1>
+
+            <p class="detail-meta">
+                <span id="detail-date"><i class="far fa-calendar-alt"></i> --/--/----</span>
+                <span id="detail-author"><i class="far fa-user"></i> ---</span>
+            </p>
+
+            <div class="detail-thumb">
+                <img id="detail-img" src="" alt="Ảnh chi tiết" style="display: none;">
+            </div>
+
+            <div id="detail-content" class="detail-content">
+                <p>Vui lòng chờ...</p>
+            </div>
+
+            <a href="news.html" class="back-news">
+                <i class="fas fa-arrow-left"></i> Quay lại Tin Tức
+            </a>
+
+        </article>
+
+        <section class="related-news">
+            <h2>Bài Viết Liên Quan</h2>
+
+            <div class="related-list">
+                <a href="newsdetail.html?id=2" class="related-item">
+                    <img src="https://via.placeholder.com/300x200/E64A19/ffffff?text=Dental+News+2" alt="Tin 2">
+                    <h3>Khuyến Mãi Tháng 12: Giảm 20% Cạo Vôi</h3>
+                </a>
+
+                <a href="newsdetail.html?id=3" class="related-item">
+                    <img src="https://via.placeholder.com/300x200/0056b3/ffffff?text=Dental+News+3" alt="Tin 3">
+                    <h3>Niềng Răng Trong Suốt: Nên Hay Không?</h3>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="main-footer"></footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/newsdetail.js"></script>
+</body>
+</html>
