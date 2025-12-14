@@ -1,4 +1,6 @@
-/* Slider Container */
+/* ======================== */
+/* 1. SLIDESHOW & WELCOME   */
+/* ======================== */
 .banner-slider {
     position: relative;
     width: 100%;
@@ -6,56 +8,156 @@
     overflow: hidden;
 }
 
-.slide {
-    display: none; /* Ẩn hết, chỉ hiện class active */
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
+.slide { display: none; width: 100%; height: 100%; }
+.slide.active { display: block; }
+.slide img { width: 100%; height: 100%; object-fit: cover; }
 
-.slide.active {
-    display: block;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Caption trên hình */
 .caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    position: absolute; top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px 40px;
     font-size: 24px;
     color: #0056b3;
     font-weight: bold;
-    border-radius: 5px;
+    border-left: 5px solid #e64a19;
 }
 
-/* Nút điều hướng */
 .prev-btn, .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    font-size: 18px;
-    z-index: 10;
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(0,0,0,0.5); color: white; border: none;
+    padding: 15px; cursor: pointer; font-size: 18px; z-index: 10;
 }
-
-.prev-btn { left: 0; }
 .next-btn { right: 0; }
+.prev-btn { left: 0; }
 
-.welcome-text {
+.welcome-text { text-align: center; padding: 50px 0; }
+.welcome-text h2 { color: #0056b3; margin-bottom: 15px; }
+
+
+/* ======================== */
+/* 2. LAYOUT NỀN TRẮNG (ACCENT) & 1 CỘT */
+/* ======================== */
+
+/* --- Bác Sĩ (Nền Xám Nhạt & Nút Xem Chi Tiết) --- */
+.section-doctors {
+    background-color: #f8f9fa; /* Nền xám nhạt làm điểm nhấn */
+    padding: 60px 0;
     text-align: center;
-    padding: 50px 0;
 }
-.welcome-text h2 { color: #0056b3; margin-bottom: 20px; }
+
+.doctor-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.doctor-card {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.doctor-card img {
+    width: 150px; height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #458f9a; /* Viền xanh làm điểm nhấn */
+}
+
+/* Nút Xem Chi Tiết Đội Ngũ */
+.btn-doctor-detail {
+    display: inline-block;
+    border: 2px solid #458f9a; 
+    color: #458f9a;
+    padding: 10px 25px;
+    margin-top: 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+.btn-doctor-detail:hover {
+    background-color: #458f9a;
+    color: white;
+}
+
+
+/* --- Dịch Vụ & Khuyến Mãi (Nền TRẮNG, 1 Cột) --- */
+.section-services-highlight, .section-promo {
+    background-color: white; /* Yêu cầu 2: Nền trắng */
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Yêu cầu 4: Hình ảnh ngang rộng */
+.wide-image {
+    width: 90%;
+    max-width: 1200px;
+    height: 400px; /* Chiều cao cố định cho hình ảnh ngang */
+    object-fit: cover;
+    margin: 0 auto 30px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.content-block {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+/* --- Định dạng màu chữ và nút cho Dịch Vụ --- */
+.section-services-highlight h2 {
+    color: #458f9a; /* Màu xanh teal làm điểm nhấn */
+}
+/* Nút Xem Tất Cả Dịch Vụ (Accent Teal) */
+.btn-main-accent {
+    display: inline-block;
+    background: #458f9a; /* Nền xanh teal */
+    color: white;
+    padding: 12px 30px;
+    margin-top: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid #458f9a;
+    transition: all 0.3s;
+}
+/* Yêu cầu 3: Hover giống nút Đặt Lịch Ngay */
+.btn-main-accent:hover {
+    background: white;
+    color: #458f9a;
+    border: 2px solid #458f9a;
+}
+
+/* --- Định dạng màu chữ và nút cho Khuyến Mãi --- */
+.section-promo h2, .section-promo .promo-highlight {
+    color: #ee7f6d; /* Màu cam coral làm điểm nhấn */
+}
+
+/* Nút Đặt Lịch Ngay (Accent Coral) */
+.btn-book-now {
+    display: inline-block;
+    background: #ee7f6d; /* Nền cam coral */
+    color: white;
+    padding: 12px 30px;
+    margin-top: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid #ee7f6d;
+    transition: all 0.3s;
+}
+.btn-book-now:hover {
+    background: white;
+    color: #ee7f6d;
+    border: 2px solid #ee7f6d;
+}
