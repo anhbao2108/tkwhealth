@@ -1,37 +1,179 @@
+/* ===== css/news.css (PHIÊN BẢN ỔN ĐỊNH - KHÔNG BỊ ẨN) ===== */
+
+/* --- 1. CẤU HÌNH & BIẾN MÀU --- */
+:root {
+    --primary-blue: #0056b3;   /* Xanh dương chủ đạo */
+    --accent-orange: #E64A19;  /* Cam điểm nhấn */
+    --text-color: #333;
+    --bg-light: #f9f9f9;
+}
+
+/* Reset lại container để tránh xung đột với style cũ */
+main.container {
+    padding: 40px 15px;
+    max-width: 1140px;
+    margin: 0 auto;
+    min-height: 500px; /* Đảm bảo chiều cao tối thiểu để không bị cụt */
+}
+
+/* Tiêu đề trang Tin Tức */
 .page-title {
     text-align: center;
-    color: #0056b3;
-    margin: 40px 0;
+    color: var(--primary-blue);
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-bottom: 3px solid var(--accent-orange);
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
 }
 
-.news-item {
+/* --- 2. LAYOUT DANH SÁCH BÀI VIẾT --- */
+.news-list {
     display: flex;
-    margin-bottom: 30px;
+    flex-direction: column; /* Xếp dọc từ trên xuống */
+    gap: 30px; /* Khoảng cách giữa các bài */
+}
+
+/* --- 3. STYLE TỪNG BÀI VIẾT (QUAN TRỌNG) --- */
+.news-item {
+    display: flex; /* Flexbox: Ảnh trái - Nội dung phải */
     background: #fff;
-    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Bóng đổ rõ hơn */
+    border: 1px solid #e0e0e0;
+    
+    /* --- SỬA LỖI TRẮNG TRANG TẠI ĐÂY --- */
+    /* Đã xóa opacity: 0 -> Để nội dung luôn hiện */
+    opacity: 1 !important; 
+    transform: none !important;
+    visibility: visible !important;
+    
+    /* Giữ hiệu ứng khi di chuột vào */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.news-item img {
-    width: 250px;
-    height: 150px;
+.news-item:hover {
+    transform: translateY(-5px) !important; /* Nổi lên khi hover */
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* Cột Ảnh (Bên trái) */
+.news-thumb-wrapper {
+    flex: 0 0 300px; /* Cố định chiều rộng ảnh là 300px */
+    position: relative;
+    overflow: hidden;
+    border-right: 1px solid #eee;
+}
+
+.news-thumb {
+    width: 100%;
+    height: 100%;
+    min-height: 220px; /* Đảm bảo ảnh có chiều cao */
     object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.news-item:hover .news-thumb {
+    transform: scale(1.05); /* Zoom ảnh nhẹ khi hover */
+}
+
+/* Cột Nội dung (Bên phải) */
+.news-content {
+    flex: 1; /* Chiếm hết phần còn lại */
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Căn giữa nội dung theo chiều dọc */
+}
+
+/* Tiêu đề bài viết */
+.news-title {
+    margin: 0 0 12px 0;
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+
+.news-title a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.news-title a:hover {
+    color: var(--accent-orange);
+}
+
+/* Thông tin ngày tháng/tác giả */
+.news-meta {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.news-meta span {
     margin-right: 20px;
-    border-radius: 4px;
+}
+.news-meta i {
+    color: var(--accent-orange);
+    margin-right: 5px;
 }
 
-.news-content h3 {
-    color: #0056b3;
-    margin-bottom: 10px;
+/* Đoạn mô tả ngắn */
+.news-excerpt {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    /* Cắt dòng nếu quá dài (tối đa 3 dòng) */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
-/* Class để JS xử lý hiệu ứng */
-.fade-text {
-    opacity: 0; /* Ẩn ban đầu */
-    transition: opacity 2s ease-in; /* Hiệu ứng hiện dần trong 2s */
+/* Nút Xem chi tiết */
+.read-more {
+    color: var(--primary-blue);
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+    width: fit-content;
 }
 
-.visible {
-    opacity: 1; /* Hiện ra */
+.read-more:hover {
+    color: var(--accent-orange);
+    border-bottom-color: var(--accent-orange);
+}
+
+/* --- 4. RESPONSIVE (MOBILE) --- */
+@media (max-width: 768px) {
+    .news-item {
+        flex-direction: column; /* Chuyển thành dọc: Ảnh trên - Chữ dưới */
+        height: auto;
+    }
+
+    .news-thumb-wrapper {
+        flex: none;
+        width: 100%;
+        height: 200px; /* Cố định chiều cao ảnh trên mobile */
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .news-content {
+        padding: 20px;
+    }
+
+    .page-title {
+        font-size: 1.8rem;
+    }
 }
