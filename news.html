@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tin Tức Nha Khoa - Dental Care</title>
+    <title>Tin Tức Sức Khỏe - Dental Care</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <link rel="stylesheet" href="css/style.css">
@@ -11,98 +12,93 @@
 </head>
 <body>
 
-    <header class="header">
-        <div class="container">
-            <div class="logo">Dental <span>Care</span></div>
-            <nav class="navbar">
-                <a href="index.html">Trang chủ</a>
-                <a href="about.html">Giới thiệu</a>
-                <a href="services.html">Dịch vụ</a>
-                <a href="news.html" class="active">Tin tức</a>
-                <a href="contact.html">Liên hệ</a>
+    <header>
+        <div class="container navbar-inner">
+            <a href="index.html" class="logo">
+                <h1>Dental <span>Care</span></h1>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="about.html">Giới Thiệu</a></li>
+                    <li><a href="services.html">Dịch Vụ</a></li>
+                    <li><a href="news.html" class="active">Tin Tức</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                    <li><a href="contact.html" class="btn-header-booking">Đặt Lịch Ngay</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <div class="container">
-            <h1 class="page-title">Tin Tức & Sự Kiện</h1>
+    <main class="container">
+        <h2 class="page-title">Tin Tức & Sự Kiện</h2>
+        
+        <div class="news-list">
+            
+            <article class="news-item" data-index="1">
+                <div class="news-thumb-wrapper">
+                    <a href="newsdetail.html?id=1">
+                        <img class="news-thumb" src="https://via.placeholder.com/400x300/0056b3/ffffff?text=Dental+News+1" alt="News 1">
+                    </a>
+                </div>
+                <div class="news-content">
+                    <h3 class="news-title">
+                        <a href="newsdetail.html?id=1">5 Cách Chăm Sóc Răng Miệng Tại Nhà</a>
+                    </h3>
+                    <p class="news-meta">
+                        <span class="date"><i class="far fa-calendar-alt"></i> 10/12/2023</span>
+                        <span class="author"><i class="far fa-user"></i> Bs. Tuấn</span>
+                    </p>
+                    <p class="news-excerpt">Hướng dẫn chi tiết cách đánh răng đúng cách và sử dụng chỉ nha khoa để tránh sâu răng hiệu quả, mang lại nụ cười tự tin mỗi ngày...</p>
+                    <a href="newsdetail.html?id=1" class="read-more">Xem chi tiết &rarr;</a>
+                </div>
+            </article>
 
-            <div class="news-list">
+            <article class="news-item" data-index="2">
+                <div class="news-thumb-wrapper">
+                    <a href="newsdetail.html?id=2">
+                        <img class="news-thumb" src="https://via.placeholder.com/400x300/E64A19/ffffff?text=Dental+News+2" alt="News 2">
+                    </a>
+                </div>
+                <div class="news-content">
+                    <h3 class="news-title">
+                        <a href="newsdetail.html?id=2">Khuyến Mãi Tháng 12: Giảm 20% Cạo Vôi</a>
+                    </h3>
+                    <p class="news-meta">
+                        <span class="date"><i class="far fa-calendar-alt"></i> 08/12/2023</span>
+                        <span class="author"><i class="far fa-user"></i> Admin</span>
+                    </p>
+                    <p class="news-excerpt">Chương trình tri ân khách hàng cuối năm, áp dụng cho tất cả các dịch vụ nha khoa tổng quát. Đăng ký ngay để nhận ưu đãi giới hạn...</p>
+                    <a href="newsdetail.html?id=2" class="read-more">Xem chi tiết &rarr;</a>
+                </div>
+            </article>
 
-                <article class="news-item">
-                    <div class="news-thumb">
-                        <a href="newsdetail.html?id=1">
-                            <img src="https://via.placeholder.com/400x300/0056b3/ffffff?text=Cham+Soc+Sau+Nieng" alt="Chăm sóc sau niềng">
-                        </a>
-                    </div>
-                    <div class="news-content">
-                        <h3 class="news-title">
-                            <a href="newsdetail.html?id=1">Hướng dẫn chăm sóc răng miệng sau khi niềng</a>
-                        </h3>
-                        <div class="news-meta">
-                            <span class="date"><i class="far fa-calendar-alt"></i> 10/12/2023</span>
-                            <span class="author"><i class="far fa-user"></i> Bs. Tuấn</span>
-                        </div>
-                        <p class="news-desc">
-                            Niềng răng là giải pháp thẩm mỹ phổ biến. Việc vệ sinh răng miệng đúng cách giúp bạn tránh được các bệnh lý và đạt kết quả tốt nhất.
-                        </p>
-                        <a href="newsdetail.html?id=1" class="read-more">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
+            <article class="news-item" data-index="3">
+                <div class="news-thumb-wrapper">
+                    <a href="newsdetail.html?id=3">
+                        <img class="news-thumb" src="https://via.placeholder.com/400x300/0056b3/ffffff?text=Dental+News+3" alt="News 3">
+                    </a>
+                </div>
+                <div class="news-content">
+                    <h3 class="news-title">
+                        <a href="newsdetail.html?id=3">Niềng Răng Trong Suốt: Nên Hay Không?</a>
+                    </h3>
+                    <p class="news-meta">
+                        <span class="date"><i class="far fa-calendar-alt"></i> 05/12/2023</span>
+                        <span class="author"><i class="far fa-user"></i> Bs. Lan</span>
+                    </p>
+                    <p class="news-excerpt">Giải đáp thắc mắc về phương pháp chỉnh nha hiện đại nhất hiện nay. Ưu nhược điểm và chi phí thực tế bạn cần biết...</p>
+                    <a href="newsdetail.html?id=3" class="read-more">Xem chi tiết &rarr;</a>
+                </div>
+            </article>
 
-                <article class="news-item">
-                    <div class="news-thumb">
-                        <a href="newsdetail.html?id=2">
-                            <img src="https://via.placeholder.com/400x300/E64A19/ffffff?text=Khuyen+Mai+Boc+Su" alt="Khuyến mãi bọc sứ">
-                        </a>
-                    </div>
-                    <div class="news-content">
-                        <h3 class="news-title">
-                            <a href="newsdetail.html?id=2">Ưu đãi giảm 30% dịch vụ bọc răng sứ thẩm mỹ</a>
-                        </h3>
-                        <div class="news-meta">
-                            <span class="date"><i class="far fa-calendar-alt"></i> 08/12/2023</span>
-                            <span class="author"><i class="far fa-user"></i> Admin</span>
-                        </div>
-                        <p class="news-desc">
-                            Chào đón mùa lễ hội, Dental Care mang đến chương trình ưu đãi lớn nhất năm cho dịch vụ răng sứ thẩm mỹ toàn hàm.
-                        </p>
-                        <a href="newsdetail.html?id=2" class="read-more">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-
-                <article class="news-item">
-                    <div class="news-thumb">
-                        <a href="newsdetail.html?id=3">
-                            <img src="https://via.placeholder.com/400x300/0056b3/ffffff?text=Lay+Cao+Rang" alt="Lấy cao răng">
-                        </a>
-                    </div>
-                    <div class="news-content">
-                        <h3 class="news-title">
-                            <a href="newsdetail.html?id=3">Tại sao nên lấy cao răng định kỳ 6 tháng/lần?</a>
-                        </h3>
-                        <div class="news-meta">
-                            <span class="date"><i class="far fa-calendar-alt"></i> 05/12/2023</span>
-                            <span class="author"><i class="far fa-user"></i> Bs. Lan</span>
-                        </div>
-                        <p class="news-desc">
-                            Cao răng là nguyên nhân chính gây ra viêm lợi, tụt lợi. Tìm hiểu quy trình lấy cao răng siêu âm không đau tại phòng khám.
-                        </p>
-                        <a href="newsdetail.html?id=3" class="read-more">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-
-            </div>
         </div>
     </main>
 
-    <footer>
-        <div class="container text-center">
-            <p>&copy; 2024 Dental Care. All rights reserved.</p>
-        </div>
-    </footer>
-
+    <footer id="main-footer"></footer>
+    
+    <script src="js/common.js"></script>
     <script src="js/news.js"></script>
 </body>
 </html>
