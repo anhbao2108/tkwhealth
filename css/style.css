@@ -1,72 +1,331 @@
-/* --- RESET & GLOBAL --- */
+/* ================================================== */
+/* 1. RESET & BASIC SETUP                             */
+/* ================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #f4f8fb; /* Màu nền xanh rất nhạt */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
     color: #333;
     line-height: 1.6;
+    font-size: 16px;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    transition: all 0.3s ease;
 }
 
-/* --- HEADER & MENU --- */
-header {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
+/* Container giới hạn chiều rộng */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px 0;
+}
+
+/* ================================================== */
+/* 2. TYPOGRAPHY & COLORS                             */
+/* ================================================== */
+h1, h2, h3, h4 {
+    color: #0056b3; 
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Tiêu đề Section */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: #e64a19;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ================================================== */
+/* 3. BUTTON STYLES                                   */
+/* ================================================== */
+.btn-main {
+    display: inline-block;
+    background-color: #e64a19;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid #e64a19;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn-main:hover {
+    background-color: #bf360c;
+    border-color: #bf360c;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: #0056b3;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: 2px solid #0056b3;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* ================================================== */
+/* 4. HEADER CHUYÊN NGHIỆP (ĐÃ CẬP NHẬT)              */
+/* ================================================== */
+
+/* 4.1. TOP BAR (Thanh thông tin trên cùng) */
+.top-bar {
+    background-color: #0056b3; /* Màu xanh chủ đạo */
+    color: #fff;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.top-bar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo h1 {
-    color: #0056b3; /* Xanh y tế đậm */
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
+.top-info {
+    display: flex;
+    gap: 20px;
 }
 
+.top-info span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.top-info i {
+    color: #E64A19; /* Icon màu cam nổi bật */
+}
+
+/* 4.2. MAIN HEADER (Logo & Menu) */
+header {
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Bóng đổ nhẹ sang trọng */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0; /* Reset padding để Top bar khít */
+}
+
+.navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0056b3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #E64A19; /* Chữ Care màu cam */
+}
+
+/* Menu */
 nav ul {
     list-style: none;
     display: flex;
-}
-
-nav ul li {
-    margin-left: 30px;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
 }
 
 nav ul li a {
-    font-weight: 500;
-    color: #555;
-    transition: color 0.3s;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 5px 0;
 }
 
-nav ul li a:hover, nav ul li a.active {
+/* Hiệu ứng gạch chân khi hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #E64A19;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
     color: #0056b3;
 }
 
-/* --- FOOTER --- */
-footer {
-    background-color: #0056b3;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+/* Nút Đặt Lịch (CTA Button) trên Header */
+.btn-header-booking {
+    background-color: #E64A19;
+    color: #fff !important; /* Bắt buộc chữ trắng */
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(230, 74, 25, 0.3);
+    transition: transform 0.3s, background-color 0.3s;
+    /* Hiệu ứng nhịp tim */
+    animation: pulse-orange 2s infinite;
+}
+
+.btn-header-booking:hover {
+    background-color: #bf360c;
+    transform: translateY(-2px);
+    color: #fff;
+}
+.btn-header-booking::after { display: none; } /* Tắt gạch chân cho nút này */
+
+/* Animation Nhịp Tim */
+@keyframes pulse-orange {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(230, 74, 25, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(230, 74, 25, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(230, 74, 25, 0); }
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+    .top-bar { display: none; }
+    .navbar-inner { flex-direction: column; gap: 15px; }
+    nav ul { gap: 15px; font-size: 0.9rem; flex-wrap: wrap; justify-content: center; }
+    .btn-header-booking { display: none; }
+}
+
+/* ================================================== */
+/* 5. FOOTER (MÀU XANH #0056b3 GIỐNG HEADER)          */
+/* ================================================== */
+
+.main-footer {
+    background-color: #0056b3; 
+    color: #ffffff;
+    padding-top: 60px;
+    margin-top: 50px;
+    border-top: 4px solid #E64A19;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-col h3 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border-bottom: 2px solid #E64A19;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-logo { font-size: 2rem; font-weight: bold; color: #fff; margin-bottom: 15px; }
+.footer-logo span { color: #E64A19; }
+
+.footer-links { list-style: none; padding: 0; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { 
+    color: #e6f0ff;
+    text-decoration: none; 
+    transition: 0.3s; 
+}
+.footer-links a:hover { 
+    color: #fff; 
+    padding-left: 5px; 
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+.footer-links i { margin-right: 8px; font-size: 0.8rem; color: #E64A19; }
+
+.contact-info { list-style: none; padding: 0; }
+.contact-info li { margin-bottom: 15px; display: flex; align-items: start; }
+.contact-info i { 
+    background: #fff; 
+    color: #0056b3; 
+    width: 25px; height: 25px; 
+    text-align: center; line-height: 25px; 
+    border-radius: 50%; 
+    margin-right: 10px; 
+    margin-top: 2px;
+}
+
+.social-links a {
+    display: inline-block; width: 35px; height: 35px; line-height: 35px;
+    background: rgba(255,255,255,0.2); 
+    text-align: center; color: #fff;
+    border-radius: 50%; margin-right: 5px; transition: 0.3s;
+}
+.social-links a:hover { background: #E64A19; }
+
+.footer-bottom {
+    background: #004494; 
+    text-align: center; 
+    padding: 15px 0; 
+    border-top: 1px solid rgba(255,255,255,0.1); 
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    .footer-top { grid-template-columns: 1fr; }
 }
