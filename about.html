@@ -2,14 +2,22 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Giới Thiệu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu - Phòng Khám Nha Khoa Dental Care</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
+
     <header>
-        <div class="container">
-            <div class="logo"><h1>Dental Care</h1></div>
+        <div class="container navbar-inner">
+            <a href="index.html" class="logo">
+                <h1>Dental <span>Care</span></h1>
+            </a>
+            
             <nav>
                 <ul>
                     <li><a href="index.html">Trang Chủ</a></li>
@@ -17,30 +25,121 @@
                     <li><a href="services.html">Dịch Vụ</a></li>
                     <li><a href="news.html">Tin Tức</a></li>
                     <li><a href="contact.html">Liên Hệ</a></li>
+                    <li><a href="contact.html" class="btn-header-booking">Đặt Lịch Ngay</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container about-section">
-        <div class="about-content">
-            <h2>Về Chúng Tôi</h2>
-            <p>Phòng khám Dental Care được thành lập với sứ mệnh mang lại nụ cười khỏe đẹp cho mọi người. Chúng tôi áp dụng các công nghệ tiên tiến nhất từ Úc và Mỹ.</p>
-            <p>Đội ngũ bác sĩ tận tâm, không gian vô trùng tuyệt đối là cam kết của chúng tôi.</p>
-        </div>
+    <main>
+        <section class="about-intro container">
+            <h2 class="section-title">Câu Chuyện Của Chúng Tôi</h2>
+            <p>
+                Được thành lập từ năm 2010, Dental Care tự hào là đơn vị tiên phong áp dụng công nghệ nha khoa không đau chuẩn Châu Âu. 
+                Với sứ mệnh "Kiến tạo nụ cười hạnh phúc", chúng tôi cam kết mang đến trải nghiệm điều trị êm ái, an toàn và thẩm mỹ nhất cho mọi khách hàng.
+            </p>
+        </section>
 
-        <div class="about-image">
-            <div class="img-wrapper">
-                <img src="images/doctor.jpg" alt="Bác sĩ trưởng khoa" class="doctor-img">
+        <section class="team container">
+            <h2 class="section-title">Đội Ngũ Chuyên Gia</h2>
+            
+            <div class="team-list">
+                <div class="doctor-item">
+                    <div class="doctor-img-wrapper">
+                        <img src="images/doctor1.jpg" alt="Bác sĩ Nguyễn Văn A">
+                    </div>
+                    <div class="doctor-info">
+                        <h3>BS. CKII Nguyễn Văn Tuấn</h3>
+                        <p class="role">Giám Đốc Chuyên Môn</p>
+                        <p class="desc">Hơn 20 năm kinh nghiệm trong lĩnh vực Cấy ghép Implant và Phẫu thuật hàm mặt. Từng tu nghiệp chuyên sâu tại Đại học Harvard (Mỹ).</p>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img-wrapper">
+                        <img src="images/doctor2.jpg" alt="Bác sĩ Trần Thị B">
+                    </div>
+                    <div class="doctor-info">
+                        <h3>ThS. BS Trần Lan</h3>
+                        <p class="role">Trưởng Khoa Chỉnh Nha</p>
+                        <p class="desc">Chuyên gia hạng Platinum về niềng răng Invisalign. Đã kiến tạo thành công hơn 3.000 nụ cười rạng rỡ cho khách hàng trẻ tuổi.</p>
+                    </div>
+                </div>
+
+                <div class="doctor-item">
+                    <div class="doctor-img-wrapper">
+                        <img src="images/doctor3.jpg" alt="Bác sĩ Lê Văn C">
+                    </div>
+                    <div class="doctor-info">
+                        <h3>BS. Nguyễn Khánh Duy</h3>
+                        <p class="role">Chuyên Gia Phục Hình Sứ</p>
+                        <p class="desc">Chuyên sâu về dán sứ Veneer và bọc răng sứ thẩm mỹ. Nổi tiếng với kỹ thuật thiết kế nụ cười (Smile Design) tự nhiên và tinh tế.</p>
+                    </div>
+                </div>
             </div>
-            <p class="dr-name">BS. Nguyễn Văn A - Trưởng Khoa</p>
-        </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Khách Hàng Nói Về Chúng Tôi</h2>
+                <div class="testimonial-grid">
+                    
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            "Tôi đã từng rất sợ nhổ răng khôn nhưng bác sĩ tại Dental Care làm rất nhẹ nhàng. Vết thương lành nhanh và không đau như tôi tưởng tượng. Cảm ơn đội ngũ rất nhiều!"
+                        </p>
+                        <div class="customer-info">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Khách hàng">
+                            <div>
+                                <h4>Chị Minh Anh</h4>
+                                <span>Dịch vụ: Nhổ răng khôn</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            "Kết quả niềng răng vượt ngoài mong đợi của mình. Hàm răng đều tăm tắp giúp mình tự tin hơn hẳn. Bác sĩ tư vấn rất có tâm và theo sát lộ trình."
+                        </p>
+                        <div class="customer-info">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Khách hàng">
+                            <div>
+                                <h4>Anh Tuấn Hưng</h4>
+                                <span>Dịch vụ: Niềng răng Invisalign</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            "Cả gia đình tôi đều khám răng định kỳ ở đây. Phòng khám sạch sẽ, hiện đại, nhân viên lễ tân nhiệt tình. Rất yên tâm khi đưa các bé đến khám."
+                        </p>
+                        <div class="customer-info">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Khách hàng">
+                            <div>
+                                <h4>Cô Thanh Thủy</h4>
+                                <span>Dịch vụ: Nha khoa tổng quát</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Phòng Khám Nha Khoa Dental Care.</p>
-    </footer>
-    
-    <script src="js/about.js"></script> 
+    <footer id="main-footer"></footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/about.js"></script>
 </body>
 </html>
