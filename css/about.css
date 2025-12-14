@@ -1,44 +1,129 @@
-.about-section {
-    display: flex; /* Layout 2 cột */
-    align-items: center;
-    margin-top: 50px;
-    gap: 40px;
-}
+/* --- STYLE CHO TRANG ABOUT --- */
 
-.about-content {
-    flex: 1; /* Chiếm 1 phần */
-}
-
-.about-content h2 {
-    color: #0056b3;
-    margin-bottom: 20px;
-}
-
-.about-image {
-    flex: 1; /* Chiếm 1 phần */
+/* Intro */
+.about-intro {
     text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+}
+.about-intro p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
 }
 
-.img-wrapper {
-    overflow: hidden; /* Cần thiết để crop ảnh khi phóng to */
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+/* Đội ngũ bác sĩ (Giữ nguyên hoặc chỉnh lại chút cho đẹp) */
+.team { margin-bottom: 60px; }
+.team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
-.doctor-img {
+.doctor-item {
+    display: flex;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+.doctor-item:hover { transform: translateY(-5px); }
+
+.doctor-img-wrapper {
+    flex: 0 0 250px;
+    overflow: hidden;
+}
+.doctor-img-wrapper img {
     width: 100%;
-    display: block;
-    /* Hiệu ứng transform & transition */
-    transition: transform 0.5s ease;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* Hover: Phóng to ảnh */
-.doctor-img:hover {
-    transform: scale(1.1);
+.doctor-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-.dr-name {
-    margin-top: 10px;
+.doctor-info h3 { color: #0056b3; margin-bottom: 5px; font-size: 1.4rem; }
+.doctor-info .role {
+    color: #E64A19;
     font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+.doctor-info .desc { color: #555; line-height: 1.6; text-align: justify; }
+
+/* --- STYLE MỚI: ĐÁNH GIÁ KHÁCH HÀNG (TESTIMONIALS) --- */
+.testimonials {
+    background-color: #f0f8ff; /* Nền xanh rất nhạt để tách biệt */
+    padding: 60px 0;
+    margin-bottom: 0; /* Sát footer */
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.review-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid #E64A19; /* Điểm nhấn màu cam trên đầu thẻ */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stars {
+    color: #f1c40f; /* Màu vàng ngôi sao */
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.review-text {
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.customer-info {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.customer-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #0056b3; /* Viền ảnh màu xanh chủ đạo */
+}
+
+.customer-info h4 {
     color: #0056b3;
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.customer-info span {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .doctor-item { flex-direction: column; }
+    .doctor-img-wrapper { height: 300px; width: 100%; }
+    .testimonial-grid { grid-template-columns: 1fr; }
 }
