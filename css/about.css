@@ -12,7 +12,7 @@
     line-height: 1.8;
 }
 
-/* Đội ngũ bác sĩ (Giữ nguyên hoặc chỉnh lại chút cho đẹp) */
+/* Đội ngũ bác sĩ */
 .team { margin-bottom: 60px; }
 .team-list {
     display: flex;
@@ -33,12 +33,20 @@
 
 .doctor-img-wrapper {
     flex: 0 0 250px;
-    overflow: hidden;
+    overflow: hidden; /* Quan trọng: Giữ ảnh không bị tràn ra ngoài khi phóng to */
 }
+
 .doctor-img-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* --- THÊM DÒNG NÀY ĐỂ TẠO CHUYỂN ĐỘNG MƯỢT --- */
+    transition: transform 0.5s ease;
+}
+
+/* --- THÊM ĐOẠN NÀY ĐỂ KHI DI CHUỘT VÀO THÌ ẢNH PHÓNG TO --- */
+.doctor-item:hover .doctor-img-wrapper img {
+    transform: scale(1.1);
 }
 
 .doctor-info {
