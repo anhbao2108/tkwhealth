@@ -1,6 +1,6 @@
 $(document).ready(function() {
     /* ========================================== */
-    /* 1. LOGIC CHO BANNER SLIDESHOW              */
+    /* 1. LOGIC CHO BANNER SLIDESHOW (jQuery)     */
     /* ========================================== */
     
     // Lấy danh sách các slide
@@ -14,12 +14,12 @@ $(document).ready(function() {
         
         // Hàm hiển thị slide cụ thể
         function showSlide(index) {
-            // Ẩn slide hiện tại (dùng hiệu ứng fadeOut của jQuery)
+            // Ẩn tất cả slide (dùng hiệu ứng fadeOut của jQuery)
             slides.fadeOut(500).removeClass('active');
             
-            // Hiện slide mới
-            $(slides[index]).fadeIn(500).addClass('active');
-            currentSlide = index; // Cập nhật slide hiện tại
+            // Hiện slide mới (eq(index) để lấy slide tại vị trí index)
+            slides.eq(index).fadeIn(500).addClass('active');
+            currentSlide = index; 
         }
 
         // Hàm bắt đầu chạy tự động
@@ -53,20 +53,25 @@ $(document).ready(function() {
             startAutoSlide(); // Khởi động lại tự động
         });
 
-        // Đảm bảo slide đầu tiên được hiện khi load trang và bắt đầu chạy tự động
-        showSlide(currentSlide); 
+        // Khởi tạo trạng thái ban đầu
+        slides.hide(); // Ẩn hết trước
+        slides.eq(0).show().addClass('active'); // Hiện slide đầu
         startAutoSlide();
     }
 
-    
+    /* ========================================== */
+    /* 2. HIỆU ỨNG CUỘN TRANG (SCROLL ANIMATION)  */
+    /* ========================================== */
     $(window).scroll(function() {
-        var scrollPos = $(window).scrollTop() + $(window).height() - 150; // Giảm offset
+        // Tính vị trí cuộn hiện tại + chiều cao cửa sổ - 1 khoảng offset
+        var scrollPos = $(window).scrollTop() + $(window).height() - 150; 
         
+        // Duyệt qua các section cần hiệu ứng
         $('.section-doctors, .section-services-highlight, .section-promo').each(function() {
+            // Nếu vị trí cuộn > vị trí của phần tử -> Thêm class hiện ra
             if (scrollPos > $(this).offset().top) {
                 $(this).addClass('is-visible'); 
             }
         });
     });
-   
-}); 
+});
