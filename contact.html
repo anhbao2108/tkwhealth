@@ -2,14 +2,22 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Liên Hệ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ - Dental Care</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
+
     <header>
-        <div class="container">
-            <div class="logo"><h1>Dental Care</h1></div>
+        <div class="container navbar-inner">
+            <a href="index.html" class="logo">
+                <h1>Dental <span>Care</span></h1>
+            </a>
+            
             <nav>
                 <ul>
                     <li><a href="index.html">Trang Chủ</a></li>
@@ -17,42 +25,112 @@
                     <li><a href="services.html">Dịch Vụ</a></li>
                     <li><a href="news.html">Tin Tức</a></li>
                     <li><a href="contact.html" class="active">Liên Hệ</a></li>
+                    <li><a href="contact.html" class="btn-header-booking">Đặt Lịch Ngay</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container">
-        <h2 class="page-title">Đặt Lịch Khám</h2>
-        
-        <div class="form-wrapper">
-            <form id="bookingForm">
-                <div class="form-group">
-                    <label>Họ và Tên:</label>
-                    <input type="text" id="fullname" placeholder="Nhập họ tên...">
-                </div>
+    <main>
+        <section class="contact-banner">
+            <div class="container">
+                <h2>Liên Hệ & Đặt Lịch</h2>
+                <p>Đội ngũ Dental Care luôn sẵn sàng lắng nghe và hỗ trợ bạn 24/7</p>
+            </div>
+        </section>
 
-                <div class="form-group">
-                    <label>Số Điện Thoại:</label>
-                    <input type="text" id="phone" placeholder="Nhập số điện thoại...">
-                </div>
+        <div class="container contact-wrapper">
+            
+            <div class="contact-info-box">
+                <h3><i class="fas fa-hospital-alt"></i> Thông Tin Phòng Khám</h3>
+                <p class="desc">Hãy ghé thăm phòng khám để được thăm khám và tư vấn miễn phí bởi các chuyên gia hàng đầu.</p>
+                
+                <ul class="info-list">
+                    <li>
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="text">
+                            <strong>Địa chỉ:</strong>
+                            <p>97 Man Thiện, TP. Thủ Đức, TP.HCM</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="text">
+                            <strong>Hotline tư vấn:</strong>
+                            <p class="highlight">1900 1234</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div class="text">
+                            <strong>Email hỗ trợ:</strong>
+                            <p>contact@dentalcare.vn</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon"><i class="fas fa-clock"></i></div>
+                        <div class="text">
+                            <strong>Giờ làm việc:</strong>
+                            <p>Thứ 2 - Thứ 7: 8:00 - 20:00</p>
+                            <p>Chủ Nhật: 8:00 - 17:00</p>
+                        </div>
+                    </li>
+                </ul>
 
-                <div class="form-group">
-                    <label>Ngày Khám:</label>
-                    <input type="date" id="date">
+                <div class="map-frame">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.520072332829!2d106.78426027480597!3d10.84799228930517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175272a50099c2b%3A0xb69747c32724213f!2zOTcgTWFuIFRoaeG7h24sIEhp4buHcCwgUGjDuiwgVGjhu6cgxJDhu6ljLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s" 
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <label>Nội Dung:</label>
-                    <textarea id="message" rows="4" placeholder="Triệu chứng hoặc yêu cầu..."></textarea>
-                </div>
+            <div class="contact-form-box">
+                <form id="bookingForm">
+                    <h3>Đăng Ký Đặt Lịch Hẹn</h3>
+                    <p class="sub-text">Vui lòng điền thông tin, trợ lý bác sĩ sẽ liên hệ xác nhận trong vòng 15 phút.</p>
+                    
+                    <div class="form-group">
+                        <label>Họ và Tên *</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="fullname" placeholder="Nhập họ tên của bạn..." required>
+                        </div>
+                    </div>
 
-                <button type="submit" class="submit-btn">Gửi Đăng Ký</button>
-            </form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Số Điện Thoại *</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-phone"></i>
+                                <input type="text" id="phone" placeholder="VD: 0909..." required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Ngày Khám</label>
+                            <div class="input-with-icon">
+                                <input type="date" id="date">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nội Dung / Triệu Chứng</label>
+                        <textarea id="message" rows="4" placeholder="Ví dụ: Tôi muốn tư vấn niềng răng..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Gửi Đăng Ký Ngay
+                    </button>
+                </form>
+            </div>
+
         </div>
     </main>
 
-    <footer><p>&copy; 2024 Phòng Khám Nha Khoa Dental Care.</p></footer>
+    <footer id="main-footer"></footer>
+
+    <script src="js/common.js"></script>
     <script src="js/contact.js"></script>
 </body>
 </html>
