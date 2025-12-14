@@ -177,3 +177,13 @@ main.container {
         font-size: 1.8rem;
     }
 }
+/* Định nghĩa hiệu ứng FadeIn */
+@keyframes fadeInText {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Áp dụng cho phần nội dung bài viết */
+.news-content {
+    animation: fadeInText 1s ease-out forwards; /* Chạy 1 lần khi load trang */
+}
