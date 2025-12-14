@@ -152,4 +152,4 @@ body { background-color: var(--bg-light); }
 @media (max-width: 768px) {
     .contact-wrapper { flex-direction: column; }
     .form-row { flex-direction: column; gap: 0; }
-}
+} 
