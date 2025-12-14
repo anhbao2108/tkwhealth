@@ -2,14 +2,22 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Dịch Vụ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ - Phòng Khám Nha Khoa Dental Care</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/services.css">
 </head>
 <body>
+
     <header>
-        <div class="container">
-            <div class="logo"><h1>Dental Care</h1></div>
+        <div class="container navbar-inner">
+            <a href="index.html" class="logo">
+                <h1>Dental <span>Care</span></h1>
+            </a>
+            
             <nav>
                 <ul>
                     <li><a href="index.html">Trang Chủ</a></li>
@@ -17,41 +25,105 @@
                     <li><a href="services.html" class="active">Dịch Vụ</a></li>
                     <li><a href="news.html">Tin Tức</a></li>
                     <li><a href="contact.html">Liên Hệ</a></li>
+                    <li><a href="contact.html" class="btn-header-booking">Đặt Lịch Ngay</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <h2 class="page-title">Dịch Vụ Của Chúng Tôi</h2>
+        <section class="services-intro">
+            <h2 class="section-title">Dịch Vụ Chuyên Sâu</h2>
+            <p>Chúng tôi cung cấp các giải pháp chăm sóc răng miệng toàn diện với công nghệ hiện đại nhất.</p>
+        </section>
         
         <div class="services-grid">
-            <div class="service-card" onclick="openModal('Tẩy Trắng Răng', 'Công nghệ Laser Whitening giúp răng trắng sáng bật tông chỉ sau 1 giờ.')">
-                <img src="images/service1.jpg" alt="Service 1">
-                <h3>Tẩy Trắng Răng</h3>
+            
+            <div class="service-card" data-id="whitening">
+                <div class="icon-box">
+                    <i class="fa-solid fa-teeth-open"></i>
+                </div>
+                <img src="images/service1.jpg" alt="Tẩy trắng răng">
+                <div class="card-body">
+                    <h3>Tẩy Trắng Răng</h3>
+                    <p>Công nghệ Laser Whitening giúp răng trắng sáng bật tông chỉ sau 1 giờ điều trị.</p>
+                </div>
             </div>
             
-            <div class="service-card" onclick="openModal('Niềng Răng', 'Phương pháp chỉnh nha thẩm mỹ, mắc cài kim loại hoặc Invisalign trong suốt.')">
-                <img src="images/service2.jpg" alt="Service 2">
-                <h3>Niềng Răng</h3>
+            <div class="service-card" data-id="braces">
+                <div class="icon-box">
+                    <i class="fa-solid fa-teeth"></i>
+                </div>
+                <img src="images/service2.jpg" alt="Niềng răng">
+                <div class="card-body">
+                    <h3>Niềng Răng Thẩm Mỹ</h3>
+                    <p>Giải pháp chỉnh nha toàn diện: Mắc cài kim loại, mắc cài sứ và Invisalign trong suốt.</p>
+                </div>
             </div>
 
-            <div class="service-card" onclick="openModal('Cấy Ghép Implant', 'Giải pháp phục hình răng đã mất hoàn hảo nhất hiện nay, độ bền trọn đời.')">
-                <img src="images/service3.jpg" alt="Service 3">
-                <h3>Cấy Ghép Implant</h3>
+            <div class="service-card" data-id="implant">
+                <div class="icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 1em; height: 1em; fill: currentColor; vertical-align: -0.125em;">
+                        <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V240c0 8.8-7.2 16-16 16s-16-7.2-16-16V64c0-17.7-14.3-32-32-32s-32 14.3-32 32V336c0 1.5 .1 3.1 .4 4.6l-8.1 36.4c-9 40.5-44.9 69-86.4 69H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h1.6c63.7 0 119.2-43.7 133-105.8l6-27C177.1 385.1 184 392 192 392h64c17.7 0 32-14.3 32-32V32z"/>
+                    </svg>
+                </div>
+                <img src="images/service3.jpg" alt="Implant">
+                <div class="card-body">
+                    <h3>Cấy Ghép Implant</h3>
+                    <p>Phục hình răng mất hoàn hảo, khôi phục chức năng ăn nhai và thẩm mỹ 99%.</p>
+                </div>
             </div>
+
+            <div class="service-card" data-id="kids">
+                <div class="icon-box">
+                    <i class="fa-solid fa-child-reaching"></i>
+                </div>
+                <img src="images/service4.jpg" alt="Nha khoa trẻ em">
+                <div class="card-body">
+                    <h3>Nha Khoa Trẻ Em</h3>
+                    <p>Chăm sóc răng sữa, trám răng phòng ngừa sâu răng và theo dõi mọc răng cho bé.</p>
+                </div>
+            </div>
+
+             <div class="service-card" data-id="veneer">
+                <div class="icon-box">
+                    <i class="fa-solid fa-gem"></i>
+                </div>
+                <img src="images/service5.jpg" alt="Bọc răng sứ">
+                <div class="card-body">
+                    <h3>Bọc Răng Sứ</h3>
+                    <p>Thẩm mỹ nụ cười với các loại sứ cao cấp: Cercon, Emax, Lava bảo hành trọn đời.</p>
+                </div>
+            </div>
+
+             <div class="service-card" data-id="extraction">
+                <div class="icon-box">
+                    <i class="fa-solid fa-tooth"></i>
+                </div>
+                <img src="images/service6.jpg" alt="Nhổ răng khôn">
+                <div class="card-body">
+                    <h3>Nhổ Răng Khôn</h3>
+                    <p>Nhổ răng tiểu phẫu không đau với máy Piezotome siêu âm, lành thương nhanh chóng.</p>
+                </div>
+            </div>
+
         </div>
     </main>
 
     <div id="serviceModal" class="modal">
         <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h2 id="modalTitle">Tiêu đề dịch vụ</h2>
-            <p id="modalDesc">Mô tả dịch vụ...</p>
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <img id="modalImg" src="" alt="Dịch vụ chi tiết">
+                <h2 id="modalTitle">Tiêu đề dịch vụ</h2>
+                <div id="modalDesc">Nội dung chi tiết...</div>
+            </div>
         </div>
     </div>
 
-    <footer><p>&copy; 2024 Phòng Khám Nha Khoa Dental Care.</p></footer>
+    <footer id="main-footer"></footer>
+
+    <script src="js/common.js"></script>
     <script src="js/services.js"></script>
 </body>
 </html>
